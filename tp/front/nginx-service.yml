@@ -4,9 +4,10 @@ metadata:
   name: nginx
   namespace: front
 spec:
+  type: ClusterIP
   selector:
     app: reverse-proxy
   ports:
     - protocol: TCP
-      port: 8383
+      port: 80
       targetPort: 80

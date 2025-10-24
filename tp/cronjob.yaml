@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: date
+spec:
+  schedule: "*/5 * * * *" # toute les 5 secondes
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: date
+            image: busybox
+            args:
+            - /bin/sh
+            - -c
+            - date
+          restartPolicy: OnFailure

@@ -28,7 +28,7 @@ kubectl apply -f front/namespace.yml
 **Résultat :**
 
 ```bash
-namespace/middle created
+namespace/front created
 ```
 
 ---
